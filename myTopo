@@ -18,31 +18,46 @@ def emptynet():
     host1 = net.addHost('host1', cls=Host, ip='10.0.0.6')
     host2 = net.addHost('host2', cls=Host, ip="10.0.0.7")
     host3 = net.addHost('host3', cls=Host, ip="10.0.0.8") 
+    
+    host4 = net.addHost('host4', cls=Host, ip='10.0.0.9')
+    host5 = net.addHost('host5', cls=Host, ip="10.0.0.10")
+    host6 = net.addHost('host6', cls=Host, ip="10.0.0.11") 
+    
+    host7 = net.addHost('host7', cls=Host, ip='10.0.0.12')
+    host8 = net.addHost('host8', cls=Host, ip="10.0.0.13")
+    host9 = net.addHost('host9', cls=Host, ip="10.0.0.14")
+    
+    host10 = net.addHost('host10', cls=Host, ip='10.0.0.15')
+    host11 = net.addHost('host11', cls=Host, ip="10.0.0.16")
+    host12 = net.addHost('host12', cls=Host, ip="10.0.0.17") 
 
     # Adding Switches
-    switch1 = net.addSwitch('s1', cls=OVSKernelSwitch, ip='10.0.0.2')
-    switch2 = net.addSwitch('s2', cls=OVSKernelSwitch, ip='10.0.0.3')
-    switch3 = net.addSwitch('s3', cls=OVSKernelSwitch, ip='10.0.0.4')
-    switch4 = net.addSwitch('s4', cls=OVSKernelSwitch, ip='10.0.0.5')
+    switch1 = net.addSwitch('s1', cls=OVSKernelSwitch, ip='10.0.0.22')
+    switch2 = net.addSwitch('s2', cls=OVSKernelSwitch, ip='10.0.0.23')
+    switch3 = net.addSwitch('s3', cls=OVSKernelSwitch, ip='10.0.0.24')
+    switch4 = net.addSwitch('s4', cls=OVSKernelSwitch, ip='10.0.0.25')
 
     # Adding Links
     net.addLink(switch1, host1)
     net.addLink(switch1, host2)
     net.addLink(switch1, host3)
 
-    net.addLink(switch2, host1)
-    net.addLink(switch2, host2)
-    net.addLink(switch2, host3)
+    net.addLink(switch2, host4)
+    net.addLink(switch2, host5)
+    net.addLink(switch2, host6)
     
-    net.addLink(switch3, host1)
-    net.addLink(switch3, host2)
-    net.addLink(switch3, host3)
+    net.addLink(switch3, host7)
+    net.addLink(switch3, host8)
+    net.addLink(switch3, host9)
     
-    net.addLink(switch4, host1)
-    net.addLink(switch4, host2)
-    net.addLink(switch4, host3)
-   
+    net.addLink(switch4, host10)
+    net.addLink(switch4, host11)
+    net.addLink(switch4, host12)
     
+    net.addLink(switch1, switch2)
+    net.addLink(switch2, switch3)
+    net.addLink(switch3, switch4)
+
 
     # Starting network
     net.start()
@@ -59,6 +74,16 @@ def emptynet():
     # Stopping Network
     net.stop()
 
+
+information():
+    print ('H1-1 -> H4-1: ', results1 = net.iperf ((host1, host10)))
+    print ('H1-2 -> H3-1: ', results2 = net.iperf ((host2, host7))
+    print ('H2-2 -> H3-2: ', results3 = net.iperf ((host5, host8))
+    print ('H4-3 -> H2-1: ', results4 = net.iperf ((host12, host4))
+    print ('H4-2 -> H1-3: ', results5 = net.iperf ((host11, host3))
+
+
 # Main Function
+information()
 setLogLevel( 'info' )
 emptynet()
