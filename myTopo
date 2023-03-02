@@ -54,9 +54,8 @@ def emptynet():
     net.addLink(switch4, host11)
     net.addLink(switch4, host12)
     
-    net.addLink(switch1, switch2)
-    net.addLink(switch2, switch3)
-    net.addLink(switch3, switch4)
+
+
 
 
     # Starting network
