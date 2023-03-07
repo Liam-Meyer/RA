@@ -103,6 +103,8 @@ def information():
 
 # Main Function
 setLogLevel( 'info' )
+print ("finished setLogLevel function")
 emptynet()
+print ("finished emptynet function")
 information()
 
