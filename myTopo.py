@@ -13,6 +13,7 @@ def emptynet():
 
     # Adding remote ONOS controller
     c1 = net.addController('c1', controller=RemoteController, ip='172.16.235.233', port=6653)
+    print ("Added controller")
 
     # Adding Hosts
     host1 = net.addHost('host1', cls=Host, ip='10.0.0.6')
@@ -30,15 +31,22 @@ def emptynet():
     host10 = net.addHost('host10', cls=Host, ip='10.0.0.15')
     host11 = net.addHost('host11', cls=Host, ip="10.0.0.16")
     host12 = net.addHost('host12', cls=Host, ip="10.0.0.17") 
+    print ("Added hosts")
+
 
     # Adding Switches
     switch1 = net.addSwitch('s1', cls=OVSKernelSwitch, ip='10.0.0.22')
     switch2 = net.addSwitch('s2', cls=OVSKernelSwitch, ip='10.0.0.23')
     switch3 = net.addSwitch('s3', cls=OVSKernelSwitch, ip='10.0.0.24')
     switch4 = net.addSwitch('s4', cls=OVSKernelSwitch, ip='10.0.0.25')
+    print ("Added switches")
+
 
     # Adding Links
     net.addLink(switch1, host1)
+    
+    print ("Added link 1")
+    
     net.addLink(switch1, host2)
     net.addLink(switch1, host3)
 
