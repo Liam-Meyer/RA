@@ -1,9 +1,15 @@
 from mininet.net import Mininet
+print ("hit point 1 \n")
 from mininet.node import Controller
+print ("hit point 2 \n")
 from mininet.cli import CLI
+print ("hit point 3 \n")
 from mininet.log import setLogLevel, info
+print ("hit point 4 \n")
 from mininet.node import OVSKernelSwitch
+print ("hit point 5 \n")
 from mininet.node import Host
+print ("hit point 6 \n")
 from mininet.node import RemoteController
 
 def emptynet():
