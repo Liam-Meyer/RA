@@ -76,10 +76,10 @@ def emptynet():
 
 def information():
     print ('H1-1 -> H4-1: ', results1 = net.iperf ((host1, host10)))
-    print ('H1-2 -> H3-1: ', results2 = net.iperf ((host2, host7))
-    print ('H2-2 -> H3-2: ', results3 = net.iperf ((host5, host8))
-    print ('H4-3 -> H2-1: ', results4 = net.iperf ((host12, host4))
-    print ('H4-2 -> H1-3: ', results5 = net.iperf ((host11, host3))
+    print ('H1-2 -> H3-1: ', results2 = net.iperf ((host2, host7)))
+    print ('H2-2 -> H3-2: ', results3 = net.iperf ((host5, host8)))
+    print ('H4-3 -> H2-1: ', results4 = net.iperf ((host12, host4)))
+    print ('H4-2 -> H1-3: ', results5 = net.iperf ((host11, host3)))
 
 
 # Main Function
