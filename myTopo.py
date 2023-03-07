@@ -83,6 +83,7 @@ def information():
 
 
 # Main Function
-information()
 setLogLevel( 'info' )
 emptynet()
+information()
+
