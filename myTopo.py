@@ -12,8 +12,7 @@ def emptynet():
     net = Mininet(controller=RemoteController, waitConnected=True)
 
     # Adding remote ONOS controller
-    c1 = net.addController('c1', controller=RemoteController, ip='172.16.235.233', port=6653) #problem here
-    print ("Added controller")
+    #c1 = net.addController('c1', controller=RemoteController, ip='172.16.235.233', port=6653) #problem here
 
     # Adding Hosts
     host1 = net.addHost('host1', cls=Host, ip='10.0.0.6')
