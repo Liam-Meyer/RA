@@ -40,6 +40,11 @@ def emptynet():
     switch3 = net.addSwitch('s3', cls=OVSKernelSwitch, ip='10.0.0.24')
     switch4 = net.addSwitch('s4', cls=OVSKernelSwitch, ip='10.0.0.25')
     print ("Added switches")
+    
+    net.addLink(switch1, c1)
+    net.addLink(switch2, c1)
+    net.addLink(switch3, c1)
+    net.addLink(switch4, c1)
 
 
     # Adding Links
