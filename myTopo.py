@@ -13,7 +13,10 @@ def emptynet():
 
     # Adding remote ONOS controller
     #c1 = net.addController('c1', controller=RemoteController, ip='172.16.235.233', port=6653) #problem here
-    c1 = net.addController('c1', controller=RemoteController, ip='192.168.0.1', port=6633)
+    c1 = net.addController('c1', controller=RemoteController, ip='175.24.1.11', port=6653)
+    c2 = net.addController('c2', controller=RemoteController, ip='175.24.1.11', port=6654)
+    c3 = net.addController('c3', controller=RemoteController, ip='175.24.1.11', port=6655)
+
 
 
     # Adding Hosts
