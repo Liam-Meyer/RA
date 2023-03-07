@@ -74,7 +74,7 @@ def emptynet():
     net.stop()
 
 
-information():
+def information():
     print ('H1-1 -> H4-1: ', results1 = net.iperf ((host1, host10)))
     print ('H1-2 -> H3-1: ', results2 = net.iperf ((host2, host7))
     print ('H2-2 -> H3-2: ', results3 = net.iperf ((host5, host8))
