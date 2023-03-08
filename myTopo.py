@@ -13,9 +13,9 @@ def emptynet():
 
     # Adding remote ONOS controller
     #c1 = net.addController('c1', controller=RemoteController, ip='172.16.235.233', port=6653) #problem here
-    c1 = net.addController('c1', controller=RemoteController, ip='175.24.1.11', port=6653)
-    c2 = net.addController('c2', controller=RemoteController, ip='175.24.1.11', port=6654)
-    c3 = net.addController('c3', controller=RemoteController, ip='175.24.1.11', port=6655)
+    c1 = net.addController('c1', controller=RemoteController, ip='175.24.1.10', port=6653)
+    c2 = net.addController('c2', controller=RemoteController, ip='175.24.1.10', port=6654)
+    c3 = net.addController('c3', controller=RemoteController, ip='175.24.1.10', port=6655)
 
 
 
@@ -52,6 +52,13 @@ def emptynet():
 
 
     # Adding Links
+    
+    #connect switches
+    net.addLink (switch1, switch2)
+    net.addLink (switch2, switch3)
+    net.addLink (switch3, switch4)
+
+    
     net.addLink(switch1, host1)
     
     print ("Added link 1")
